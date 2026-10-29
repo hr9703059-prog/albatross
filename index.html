@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0d">
+  <meta name="description" content="Albatross Academy — Class 9 and 10 test sessions, academic schedules, and student preparation.">
+  <title>Albatross Academy | Test Session 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">
+    <span class="live-dot"></span>
+    NOVEMBER 2026 TEST SESSION
+    <span class="announcement-right">LEARN TODAY. LEAD TOMORROW.</span>
+  </div>
+
+  <header class="navbar">
+    <a href="#home" class="brand">
+      <div class="brand-mark">A<span>+</span></div>
+      <div><strong>ALBATROSS</strong><small>ACADEMY</small></div>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    <nav id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#schedule">Test Schedule</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#progress">Preparation</a>
+      <a href="#admission" class="nav-cta">Register Now ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <span class="eyebrow"><span class="gold-line"></span> YOUR SUCCESS STARTS HERE</span>
+        <h1>Prepare with<br>Purpose. <em>Achieve</em><br>with Confidence.</h1>
+        <p>Structured test sessions for Class 9th & 10th, designed to strengthen concepts, improve performance and build exam confidence.</p>
+        <div class="hero-actions">
+          <a href="#schedule" class="btn btn-gold">Explore Test Plan <span>↗</span></a>
+          <a href="#admission" class="btn btn-outline">Join the Academy</a>
+        </div>
+        <div class="hero-note"><span>✦</span> NOVEMBER INTAKE · ACADEMIC SESSION 2026</div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="hero-medallion">
+          <span class="medallion-top">DREAM · LEARN · ACHIEVE</span>
+          <div class="hero-symbol">A<span>+</span></div>
+          <strong>EXCELLENCE</strong>
+          <small>BEGINS WITH PREPARATION</small>
+        </div>
+        <div class="float-card card-top"><span>01</span><div><b>Concept Clarity</b><small>Learn to understand</small></div></div>
+        <div class="float-card card-bottom"><span>02</span><div><b>Test Practice</b><small>Prepare to perform</small></div></div>
+      </div>
+      <div class="hero-bottom"><span>ACADEMIC EXCELLENCE</span><span>01 — 09 / 10</span><span>FUTURE READY</span></div>
+    </section>
+
+    <section class="stats section-wrap">
+      <div class="stat"><span class="stat-icon">01</span><div><strong>Class 9th</strong><small>Foundation & concepts</small></div></div>
+      <div class="stat"><span class="stat-icon">02</span><div><strong>Class 10th</strong><small>Board exam preparation</small></div></div>
+      <div class="stat"><span class="stat-icon">03</span><div><strong>Weekly Tests</strong><small>Subject-wise practice</small></div></div>
+      <div class="stat"><span class="stat-icon">04</span><div><strong>Progress Review</strong><small>Track your preparation</small></div></div>
+    </section>
+
+    <section class="section-wrap schedule-section" id="schedule">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">YOUR ROADMAP TO SUCCESS</span>
+          <h2>Test Session <em>Schedule</em></h2>
+          <p>A proposed weekly test plan starting in November 2026.</p>
+        </div>
+        <div class="session-badge"><span class="live-dot"></span> NOV — DEC 2026</div>
+      </div>
+
+      <div class="schedule-toolbar">
+        <div class="class-switch" role="group" aria-label="Select class">
+          <button class="class-btn active" data-class="9">Class 9th</button>
+          <button class="class-btn" data-class="10">Class 10th</button>
+        </div>
+        <label class="filter-label">MONTH
+          <select id="monthFilter">
+            <option value="all">All months</option>
+            <option value="November">November 2026</option>
+            <option value="December">December 2026</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="schedule-summary">
+        <div><small>SELECTED CLASS</small><strong id="selectedClass">Class 9th</strong></div>
+        <div><small>PLANNED TESTS</small><strong id="testCount">12</strong></div>
+        <div><small>SESSION START</small><strong>01 NOV 2026</strong></div>
+      </div>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>WEEK</th><th>TEST DATE</th><th>SUBJECT</th><th>TEST TYPE</th><th>STATUS</th></tr>
+          </thead>
+          <tbody id="scheduleBody"></tbody>
+        </table>
+      </div>
+      <p class="schedule-note">* This is a proposed schedule for planning purposes. Confirm final dates, timings and syllabus with the academy administration.</p>
+    </section>
+
+    <section class="subjects-section" id="subjects">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">BUILD A STRONG FOUNDATION</span><h2>Subjects That <em>Shape Success</em></h2><p>Choose your academic stream and focus on consistent preparation.</p></div>
+        </div>
+        <div class="subject-tabs">
+          <button class="subject-tab active" data-stream="science">Science Group</button>
+          <button class="subject-tab" data-stream="computer">Computer Science</button>
+          <button class="subject-tab" data-stream="arts">Humanities / Other</button>
+        </div>
+        <div class="subject-grid" id="subjectGrid"></div>
+        <p class="schedule-note">Available subjects depend on your class, group and applicable board syllabus.</p>
+      </div>
+    </section>
+
+    <section class="section-wrap progress-section" id="progress">
+      <div class="progress-copy">
+        <span class="eyebrow">SMALL STEPS. BIG RESULTS.</span>
+        <h2>Your Preparation.<br><em>Your Progress.</em></h2>
+        <p>Use this personal tracker to mark subjects you have revised. Your progress is calculated in this browser and is not sent to the academy.</p>
+        <div class="progress-bar"><span id="progressFill"></span></div>
+        <div class="progress-label"><strong id="progressPercent">0%</strong><span>SUBJECTS REVISED</span></div>
+        <button class="btn btn-gold" id="resetProgress">Reset Tracker ↻</button>
+      </div>
+      <div class="tracker-panel">
+        <div class="tracker-head"><div><span class="eyebrow">STUDENT DASHBOARD</span><h3>Revision Checklist</h3></div><span class="tracker-icon">✓</span></div>
+        <p class="tracker-sub">Tick a subject after completing its revision.</p>
+        <div id="revisionList"></div>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="quote-mark">“</div>
+      <p>Success is the sum of small efforts, repeated day in and day out.</p>
+      <span>THE ALBATROSS APPROACH</span>
+    </section>
+
+    <section class="section-wrap admission-section" id="admission">
+      <div class="admission-copy">
+        <span class="eyebrow">TAKE THE NEXT STEP</span>
+        <h2>Ready to Begin<br>Your <em>Success Story?</em></h2>
+        <p>Submit your details to prepare an admission enquiry. The form will create a message for you to send to the academy.</p>
+        <div class="contact-points"><span>✦ Personalised learning</span><span>✦ Structured test preparation</span><span>✦ Academic guidance</span></div>
+      </div>
+      <form class="admission-form" id="admissionForm">
+        <h3>Admission Enquiry</h3>
+        <p>Tell us a little about yourself.</p>
+        <label>Student Name<input type="text" id="studentName" placeholder="Enter full name" required></label>
+        <label>Parent / Guardian Name<input type="text" id="parentName" placeholder="Enter parent name"></label>
+        <div class="form-row">
+          <label>Class<select id="studentClass" required><option value="">Select class</option><option>9th</option><option>10th</option></select></label>
+          <label>Study Group<select id="studentGroup"><option>Science</option><option>Computer Science</option><option>Humanities / Other</option></select></label>
+        </div>
+        <label>Contact Number<input type="tel" id="studentPhone" placeholder="03XX XXXXXXX" required></label>
+        <label>Message<textarea id="studentMessage" rows="3" placeholder="Ask about schedule, timings or admissions"></textarea></label>
+        <button type="submit" class="btn btn-gold form-submit">Prepare Enquiry Message ↗</button>
+        <div id="formMessage" role="status"></div>
+        <small>Submitting prepares a WhatsApp message; it does not automatically enrol you.</small>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <a href="#home" class="brand footer-brand"><div class="brand-mark">A<span>+</span></div><div><strong>ALBATROSS</strong><small>ACADEMY</small></div></a>
+      <p>Dream. Learn. Achieve.<br>Your future starts with preparation.</p>
+      <a href="#schedule" class="footer-link">View Test Schedule ↑</a>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> ALBATROSS ACADEMY</span><span>ACADEMIC SESSION 2026–27</span><a href="#home">BACK TO TOP ↑</a></div>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
